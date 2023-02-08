@@ -1,15 +1,17 @@
 import pygame
-import os
-import mainView
+import sys
+from mainView import View
+
+#Startup
 pygame.init()
-obj = mainView()
+obj = View()
 
 
 
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()    
+            pygame.quit() 
+            sys.quit()   
 
 
