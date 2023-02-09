@@ -1,11 +1,12 @@
 import pygame
 import sys
 from mainView import View
+from paddle import Paddle
 
 #Startup
 pygame.init()
 obj = View()
-
+user = Paddle()
 
 
 while True:
@@ -15,6 +16,6 @@ while True:
             sys.quit()
     
     
-    obj.viewUpdate()   
+    obj.viewUpdate(user)   
 
 
