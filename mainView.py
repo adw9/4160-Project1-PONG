@@ -9,8 +9,8 @@ class View():
    screenColor = (50,50,50)
 
    #placeholder, will be replaced by paddle class
-   gameRect = pygame.Rect(50, 50, 50, 50)
-   rectColor = (255, 0, 0)
+   #gameRect = pygame.Rect(50, 50, 50, 50)
+   #rectColor = (255, 0, 0)
 
 
    def __init__(self):
