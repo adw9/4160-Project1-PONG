@@ -1,7 +1,9 @@
 # 4160-Project1-PONG
 
 
-
+pygame 2.1.2 
+Win10 Pro Version	10.0.19045 Build 19045
+Python 3.10.10
 I chose pong due to its simplistic nature, and hope to create a 2 player pong controlled by WS and UpDown arrows.
 
 # mainView.py
