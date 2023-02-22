@@ -3,12 +3,15 @@ import sys
 from mainView import View
 from paddle import Paddle
 from controller import mainController
+from ball import Ball
 
 #Startup
 pygame.init()
 obj = View()
 user = Paddle()
 controller = mainController()
+ball = Ball()
+
 
 
 while True:
@@ -18,6 +21,6 @@ while True:
             sys.exit()
     
     controller.userInput(user)
-    obj.viewUpdate(user)   
+    obj.viewUpdate(user, ball)   
 
 
