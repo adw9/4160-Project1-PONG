@@ -1,5 +1,7 @@
 import pygame
 
+#hit top wall, reverse y velocity. hit paddle, reverse x velocity. 
+
 
 class Ball():
     diameter = 0
