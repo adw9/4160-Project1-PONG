@@ -3,8 +3,7 @@ from paddle import Paddle
 
 
 class mainController():
-    #filler var, I have no idea what to put here.
-    #rectSpeed = 0
+    #need a better solution for a var to pass than a bool
     input = False
 
     def userInput(self, paddle):
