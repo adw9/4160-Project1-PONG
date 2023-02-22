@@ -13,5 +13,5 @@ This file initalizes every other class, and contains the while loop running the 
 # paddle.py
 This file contains the render information for the paddle, including size,color,position. This file also contains move_rect(), which is called in the controller and moves the paddle. This function also handles the proper bounds for the paddle, ensuring it doesnt leave the screen. 
 
-# Controller.py
+# controller.py
 This file contains the mainController class, whos main purpose is to manage user inputs. userInput() is called in the gameScript loop, and passes movement information into the paddle to be executed. 
