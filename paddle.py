@@ -19,9 +19,11 @@ class Paddle():
         self.SCREEN_HEIGHT = 500
         self.gameRect = pygame.Rect(self.rectX, self.rectY, self.rectWidth, self.rectHeight)
     #X is unecesary as X never leaves the wall for Pong, but is kept for future adaptability.
-    def updatePos(self,X,Y):
-        self.rectX = X
-        self.rectY = Y
+
+    #this function does nothing except move this paddle to the right side of the map
+    def setPlayer2(self):
+        self.rectX = 550
+        self.gameRect = pygame.Rect(self.rectX, self.rectY, self.rectWidth, self.rectHeight)
 
 
     def move_rect(self,input):

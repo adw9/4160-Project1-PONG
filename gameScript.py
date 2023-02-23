@@ -8,7 +8,11 @@ from ball import Ball
 #Startup
 pygame.init()
 obj = View()
-user = Paddle()
+
+u1 = Paddle()
+u2 = Paddle()
+u2.setPlayer2()
+
 controller = mainController()
 ball = Ball()
 
@@ -20,7 +24,7 @@ while True:
             pygame.quit() 
             sys.exit()
     
-    controller.userInput(user)
-    obj.viewUpdate(user, ball)   
+    controller.userInput(u1,u2)
+    obj.viewUpdate(u1,u2, ball)   
 
 

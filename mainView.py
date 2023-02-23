@@ -19,13 +19,13 @@ class View():
       surface = pygame.display.set_mode(SCREEN_SIZE)
 
       #This will take paddle and ball as an arguement soon
-   def viewUpdate(self, paddle, ball):
+   def viewUpdate(self, u1,u2, ball):
       #background
       self.surface.fill(self.screenColor)
       pygame.draw.circle(self.surface, ball.color, ball.ballPos, ball.diameter)
       #user paddle
-      pygame.draw.rect(self.surface, paddle.rectColor, paddle.gameRect)
-      
+      pygame.draw.rect(self.surface, u1.rectColor, u1.gameRect)
+      pygame.draw.rect(self.surface, u2.rectColor, u2.gameRect)
       
       pygame.display.update()
 
