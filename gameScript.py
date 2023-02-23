@@ -5,18 +5,16 @@ from paddle import Paddle
 from controller import mainController
 from ball import Ball
 
-#Startup
+#Startup, create objects
 pygame.init()
 obj = View()
-
 u1 = Paddle()
 u2 = Paddle()
-u2.setPlayer2()
-
 controller = mainController()
 ball = Ball()
 
-
+#move player2 to right side
+u2.setPlayer2()
 
 while True:
     for event in pygame.event.get():
