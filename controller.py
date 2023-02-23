@@ -1,5 +1,4 @@
 import pygame
-from paddle import Paddle
 
 
 class mainController():
