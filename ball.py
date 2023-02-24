@@ -21,7 +21,7 @@ class Ball():
     gameRect = pygame.Rect(ballX, ballY, rectWidth, rectHeight)
 
     def __init__(self):
-        self.ballPos = self.ballX, self.ballY = 250, 250
+        self.ballPos = self.ballX, self.ballY = 350, 250
         self.diameter = 10
         self.color = (255,0,0)
         self.speedX = .05
@@ -47,6 +47,6 @@ class Ball():
         self.ballPos = self.ballX, self.ballY
         self.gameRect = pygame.Rect(self.ballX, self.ballY, self.rectWidth, self.rectHeight)
     def ball_reset(self):
-        self.ballPos = self.ballX, self.ballY = 250, 250
+        self.ballPos = self.ballX, self.ballY = 350, 250
         self.gameRect = pygame.Rect(self.ballX, self.ballY, self.rectWidth, self.rectHeight)
         

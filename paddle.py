@@ -14,7 +14,7 @@ class Paddle():
     
     
     def __init__(self):
-        self.rectY = 300
+        self.rectY = 250
         self.rectSpeed = .5
         self.SCREEN_HEIGHT = 400
         self.gameRect = pygame.Rect(self.rectX, self.rectY, self.rectWidth, self.rectHeight)
@@ -27,9 +27,9 @@ class Paddle():
 
 
     def move_rect(self,input):
-        if(input and self.rectY > 0):
+        if(input):
             self.rectY -= self.rectSpeed
-        elif(not input and self.rectY < (self.SCREEN_HEIGHT)):
+        else:
             self.rectY += self.rectSpeed
             
 

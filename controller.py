@@ -5,20 +5,26 @@ class mainController():
     #need a better solution for a var to pass than a bool
     #true = up, false = down
     input = False
+    #top/left/right/bottom screen bounds
+    topWall = pygame.Rect(0, -5, 700, 5)
+    botWall = pygame.Rect(0, 500, 700, 5)
+    leftWall = pygame.Rect(0,0,5,700)
+    rightWall = pygame.Rect(700,0,5,700)
+    
 
     def userInput(self, u1, u2):
         keys = pygame.key.get_pressed()
 
-        if keys[pygame.K_UP]:
+        if(keys[pygame.K_UP] and not u2.gameRect.colliderect(self.topWall)):
             input = True
             u2.move_rect(input)
-        elif keys[pygame.K_DOWN]:
+        elif(keys[pygame.K_DOWN] and not u2.gameRect.colliderect(self.botWall)):
             input = False
             u2.move_rect(input)
-        elif keys[pygame.K_w]:
+        elif(keys[pygame.K_w] and not u1.gameRect.colliderect(self.topWall)):
             input = True
             u1.move_rect(input)
-        elif keys[pygame.K_s]:
+        elif(keys[pygame.K_s] and not u1.gameRect.colliderect(self.botWall)):
             input = False
             u1.move_rect(input)
 
@@ -29,22 +35,16 @@ class mainController():
         elif(u2.gameRect.colliderect(ball.gameRect)):
             ball.moveLeft = True
 
-        #top/left/right/bottom screen bounds
-        topWall = pygame.Rect(0, 0, 700, 1)
-        botWall = pygame.Rect(0, 500, 700, 1)
-        leftWall = pygame.Rect(0,0,1,700)
-        rightWall = pygame.Rect(700,0,1,700)
-
         #collision detection between ball and outside walls
-        if(ball.gameRect.colliderect(topWall)):
+        if(ball.gameRect.colliderect(self.topWall)):
             ball.moveDown = True
-        elif(ball.gameRect.colliderect(botWall)):
+        elif(ball.gameRect.colliderect(self.botWall)):
             ball.moveDown = False
-        elif(ball.gameRect.colliderect(leftWall)):
+        elif(ball.gameRect.colliderect(self.leftWall)):
             print("Player 2 Scores!")
             ball.moveLeft = False
             ball.ball_reset()
-        elif(ball.gameRect.colliderect(rightWall)):
+        elif(ball.gameRect.colliderect(self.rightWall)):
             print("Player 1 Scores!")
             ball.moveLeft = True
             ball.ball_reset()
