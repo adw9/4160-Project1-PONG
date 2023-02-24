@@ -24,8 +24,8 @@ class Ball():
         self.ballPos = self.ballX, self.ballY = 250, 250
         self.diameter = 10
         self.color = (255,0,0)
-        self.speedX = .08
-        self.speedY = .08
+        self.speedX = .05
+        self.speedY = .05
 
 
         self.rectWidth = 10
@@ -41,9 +41,12 @@ class Ball():
         if(self.moveDown):
             self.ballY += self.speedY
         else:
-            self.ballY -= self.speedY    
+            self.ballY -= self.speedY
+
         #update gameRect with new var
-        print("ballX = ",self.ballX)
         self.ballPos = self.ballX, self.ballY
+        self.gameRect = pygame.Rect(self.ballX, self.ballY, self.rectWidth, self.rectHeight)
+    def ball_reset(self):
+        self.ballPos = self.ballX, self.ballY = 250, 250
         self.gameRect = pygame.Rect(self.ballX, self.ballY, self.rectWidth, self.rectHeight)
         

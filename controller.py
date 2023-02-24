@@ -25,30 +25,28 @@ class mainController():
     def collisionDetection(self, u1, u2, ball):
 
         if(u1.gameRect.colliderect(ball.gameRect)):
-            print("ball hit left")
             ball.moveLeft = False
         elif(u2.gameRect.colliderect(ball.gameRect)):
-            print("ball hit right")
             ball.moveLeft = True
 
+        #top/left/right/bottom screen bounds
+        topWall = pygame.Rect(0, 0, 700, 1)
+        botWall = pygame.Rect(0, 500, 700, 1)
+        leftWall = pygame.Rect(0,0,1,700)
+        rightWall = pygame.Rect(700,0,1,700)
 
-        #self.gameRect = pygame.Rect(self.rectX, self.rectY, self.rectWidth, self.rectHeight)
-
-        #top/left/right/bottom screen bounds for ball
-        topWall = pygame.Rect(0, 0, 600, 5)
-        botWall = pygame.Rect(0, 600, 600, 5)
-        leftWall = pygame.Rect(0,0,5,600)
-        rightWall = pygame.Rect(600,0,5,600)
-
+        #collision detection between ball and outside walls
         if(ball.gameRect.colliderect(topWall)):
             ball.moveDown = True
         elif(ball.gameRect.colliderect(botWall)):
             ball.moveDown = False
         elif(ball.gameRect.colliderect(leftWall)):
-            print("Player2 Scores!")
+            print("Player 2 Scores!")
             ball.moveLeft = False
+            ball.ball_reset()
         elif(ball.gameRect.colliderect(rightWall)):
             print("Player 1 Scores!")
             ball.moveLeft = True
+            ball.ball_reset()
 
         ball.move_ball()
