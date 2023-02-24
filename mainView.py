@@ -26,6 +26,7 @@ class View():
       #user paddle
       pygame.draw.rect(self.surface, u1.rectColor, u1.gameRect)
       pygame.draw.rect(self.surface, u2.rectColor, u2.gameRect)
+      pygame.draw.rect(self.surface, u1.rectColor, testRect)
       
       pygame.display.update()
 

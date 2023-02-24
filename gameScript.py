@@ -23,6 +23,7 @@ while True:
             sys.exit()
     
     controller.userInput(u1,u2)
+    controller.collisionDetection(u1,u2,ball)
     obj.viewUpdate(u1,u2, ball)   
 
 
