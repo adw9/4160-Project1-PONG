@@ -28,7 +28,7 @@ class mainController():
             input = False
             u1.move_rect(input)
 
-    def collisionDetection(self, u1, u2, ball):
+    def collisionDetection(self, u1, u2, ball, model):
 
         if(u1.gameRect.colliderect(ball.gameRect)):
             ball.moveLeft = False
@@ -44,9 +44,11 @@ class mainController():
             print("Player 2 Scores!")
             ball.moveLeft = False
             ball.ball_reset()
+            model.addScorep2()
         elif(ball.gameRect.colliderect(self.rightWall)):
             print("Player 1 Scores!")
             ball.moveLeft = True
             ball.ball_reset()
+            model.addScorep1()
 
         ball.move_ball()
