@@ -1,7 +1,7 @@
 import pygame
 import sys
 
-class Model():
+class Score():
     maxScore = 0
     p1Score = 0
     p2Score = 0

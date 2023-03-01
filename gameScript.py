@@ -4,7 +4,7 @@ from mainView import View
 from paddle import Paddle
 from controller import mainController
 from ball import Ball
-from model import Model
+from score import Score
 
 #Startup, create objects
 pygame.init()
@@ -13,7 +13,7 @@ u1 = Paddle()
 u2 = Paddle()
 controller = mainController()
 ball = Ball()
-model = Model()
+score = Score()
 
 #move player2 to right side
 u2.setPlayer2()
@@ -27,10 +27,10 @@ while True:
             sys.exit()
     
     controller.userInput(u1,u2)
-    controller.collisionDetection(u1,u2,ball,model)
+    controller.collisionDetection(u1,u2,ball,score)
     obj.viewUpdate(u1,u2, ball)   
 
-    if(model.detWinner()):
+    if(score.detWinner()):
         pygame.quit() 
         sys.exit()
 
