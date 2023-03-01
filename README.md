@@ -39,9 +39,12 @@ This file is the only file that prints to the console, declaring when a player s
 score.py acts as a minor part of the model, but mostly exists as a relic of misinterpreted instructions.
 
 # File Structure
+![4160_pong](https://user-images.githubusercontent.com/92704425/222283008-77984db8-7d04-41d0-9b53-6e0b126d56ac.png)
 
 # Future Work
 In the future, the functionality of score.py should be incorporated into paddle.py, as score.py being its own class with functions is mostly redundant. A solution to better movement functionality would also be a strong future work item, as currently up/down arrows will overrride commands from WS. The paddles can not move simultaneously. 
+
+It also would we wise to add an icon png to the project, as it currently uses the default pygame icon.
 
 # Generalization
 gameScript can be easily updated to manage a different number of games, as it just calls other functions, without knowledge of their functionality. paddle.py can be generalized to just be a user controlled character, with the inclusion of a method to move on the X axis. ball.py cannot be generalized much, and would be useless in another game.
