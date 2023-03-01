@@ -12,9 +12,11 @@ class Model():
 
     def addScorep1(self):
         self.p1Score += 1
+        print("Player 1 Scores!")
 
     def addScorep2(self):
         self.p2Score += 1
+        print("Player 2 Scores!")
 
     def detWinner(self):
         if(self.p1Score >= self.maxScore):

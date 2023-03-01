@@ -41,12 +41,12 @@ class mainController():
         elif(ball.gameRect.colliderect(self.botWall)):
             ball.moveDown = False
         elif(ball.gameRect.colliderect(self.leftWall)):
-            print("Player 2 Scores!")
+            
             ball.moveLeft = False
             ball.ball_reset()
             model.addScorep2()
         elif(ball.gameRect.colliderect(self.rightWall)):
-            print("Player 1 Scores!")
+            
             ball.moveLeft = True
             ball.ball_reset()
             model.addScorep1()
