@@ -7,7 +7,7 @@ Win10 Pro Version	10.0.19045 Build 19045
 Python 3.10.10
 
 # Reasoning
-I chose pong due to its simple game mechanics, but a necessasity to have a basic working of collisions and game state. This pong game has 2 paddles, controlled by WS and UpDown, and delcares a winner at 5 points. Below, design decisions for every file can be explored. 
+I chose pong due to its simple game mechanics, but a necessasity to have a basic working of collisions and game state. This pong game has 2 paddles, controlled by WS and UpDown, and declares a winner at 5 points. Below, design decisions for every file can be explored. 
 
 # mainView.py
 mainView takes information from the paddle and ball objects, and renders them onscreen. mainView.viewUpdate refreshes the screen, and should be one of the last things to happen in the actual gameScript.
